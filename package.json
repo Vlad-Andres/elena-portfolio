@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "postinstall": "npm run build",
     "dev": "vite",
     "start": "node index.js",
     "build": "vite build",
