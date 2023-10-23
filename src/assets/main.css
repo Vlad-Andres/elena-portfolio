@@ -6,6 +6,23 @@
 @media screen and (max-width: 1024px) {
     :root {
         --margin-x-content: var(--small-x-margin);
+
+        /* Fonts */
+        --h1-font-size: var(--md-h1-font-size);
+        --h1-line-height: var(--md-h1-line-height);
+        --h2-font-size: var(--md-h2-font-size);
+        --h2-line-height: var(--md-h2-line-height);
+        --h3-font-size: var(--md-h3-font-size);
+        --h3-line-height: var(--md-h3-line-height);
+        --h4-font-size: var(--md-h4-font-size);
+        --h4-line-height: var(--md-h4-line-height);
+        --h5-font-size: var(--md-h5-font-size);
+        --h5-line-height: var(--md-h5-line-height);
+        --p-large-font-size: var(--md-p-large-font-size);
+        --p-large-line-height: var(--md-p-large-line-height);
+        --p-medium-font-size: var(--md-p-medium-font-size);
+        --p-medium-line-height: var(--md-p-medium-line-height);
+        --p-small-font-size: var(--md-p-small-font-size);
     }
   }
 

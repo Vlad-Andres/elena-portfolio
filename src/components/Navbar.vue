@@ -1,11 +1,13 @@
 <template>
 <div>
     <div class="px-[--margin-x-content] grid grid-cols-12 w-full gap-8 h-24 py-6">
-        <div class="col-span-3  flex items-center justify-center">
-            <h3 class="align-middle w-full">
-                .Clacova
+        <span class="col-span-3  flex items-center justify-center">
+            <h3 class="align-middle">
+                <span class="text-[--red]">.</span>
+                <span>Clacova</span>
+
             </h3>
-        </div>
+        </span>
         <div class="col-span-3 "></div>
         <div class="col-span-2  text-center bg-red">
             <Button :text="'About'" />
