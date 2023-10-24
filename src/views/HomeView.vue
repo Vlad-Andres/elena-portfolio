@@ -29,6 +29,6 @@
 </template>
 
 <script setup>
-import LinkedinLogo from '../components/icons/IconLinkedin.vue'
-import InstaIcon from '../components/icons/IconInsta.vue'
+import LinkedinLogo from '@/components/icons/IconLinkedIn.vue'
+import InstaIcon from '@/components/icons/IconInsta.vue'
 </script>
