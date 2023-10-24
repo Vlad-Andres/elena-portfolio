@@ -22,8 +22,8 @@
 :root {
   --color-background: var(--primary-white);
   --color-text-default: var(--primary-dark);
-  --small-x-margin: 5rem;
-  --large-x-margin: 10rem;
+  --small-x-margin: 20%;
+  --large-x-margin: 11%;
   --margin-x-content: var(--large-x-margin);
 
   /* Fonts */
@@ -118,13 +118,13 @@ p {
 h1 {
   /* Heading/1 */  
   font-size: var(--h1-font-size) !important;
-  font-weight: 700;
+  font-weight: 700 !important;
   letter-spacing: -0.11919rem;
   line-height: var(--h1-line-height) !important;
 }
 
 h1.light {
-  font-weight: 300 ;
+  font-weight: 300 !important;
   letter-spacing: -0.05963rem ;
 }
 

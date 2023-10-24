@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
     :root {
         --margin-x-content: var(--small-x-margin);
 
