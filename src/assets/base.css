@@ -22,9 +22,9 @@
 :root {
   --color-background: var(--primary-white);
   --color-text-default: var(--primary-dark);
-  --small-x-margin: 20%;
-  --large-x-margin: 11%;
-  --margin-x-content: var(--large-x-margin);
+  /* --small-x-margin: 22%;
+  --large-x-margin: 10rem;
+  --margin-x-content: var(--large-x-margin); */
 
   /* Fonts */
   --lg-h1-font-size: 5.96063rem;
