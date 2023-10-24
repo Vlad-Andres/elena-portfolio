@@ -1,6 +1,9 @@
 {
   "name": "elena-portfolio",
   "version": "0.0.0",
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "private": true,
   "scripts": {
     "postinstall": "npm run build",
