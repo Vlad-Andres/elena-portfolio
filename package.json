@@ -2,7 +2,7 @@
   "name": "elena-portfolio",
   "version": "0.0.0",
   "engines": {
-    "node": "21.0.0"
+    "node": "18.18.2"
   },
   "private": true,
   "scripts": {
