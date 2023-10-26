@@ -2,7 +2,7 @@
 <div>
     <div class=" grid grid-cols-12 w-full gap-8 h-24 py-6">
         <span class="col-span-3  flex items-center justify-center">
-            <h3 class="align-middle">
+            <h3 class="align-middle mb-[-5%]">
                 <span class="text-[--red]">.</span>
                 <span>Clacova</span>
 

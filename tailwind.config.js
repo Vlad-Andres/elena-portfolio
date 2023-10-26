@@ -11,12 +11,12 @@ module.exports = {
         dark: 'var(--primary-dark)',
       },
       neutral: {
-        white: 'var(--neutral-white)',
-        light: 'var(--neutral-light)',
-        mid: 'var(--neutral-mid)',
-        greyLight: 'var(--neutral-grey-light)',
-        grey: 'var(--neutral-grey)',
-        greyDark: 'var(--neutral-grey-dark)',
+        white: 'var(--white)',
+        light: 'var(--light)',
+        mid: 'var(--mid)',
+        greyLight: 'var(--grey-light)',
+        grey: 'var(--grey)',
+        greyDark: 'var(--grey-dark)',
       },
       red: {
         lighter: 'var(--red-ligher)',

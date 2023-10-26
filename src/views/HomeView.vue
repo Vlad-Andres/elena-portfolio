@@ -2,8 +2,7 @@
 </script>
 
 <template>
-  <div>
-    
+  <div> 
     <h1 class="light mt-12 text-center pb-16">
       <span>Welcome</span>
       <span class="text-[--red]">!</span>
@@ -11,7 +10,7 @@
     <!-- Introdcutory row -->
     <div class="flex flex-row">
       <div class="flex-none xl:w-[40rem] w-[20rem] xl:h-[10rem] h-20 ">
-        <h1>
+        <div class="h1">
           <span>
             My name is Elena
           </span>
@@ -19,7 +18,7 @@
             Clacova
           </span>
           <span class="text-[--red]">.</span>
-        </h1>
+        </div>
       </div>
       
       <div class="flex-auto w-1/4"></div>
@@ -52,21 +51,7 @@
     </div>
     <div class="flex flex-col">
       <div 
-        class="
-          w-full
-          h-[450px]
-          bg-red-lighter
-          block absolute
-          left-0
-          mb-10
-          after:border-b-[3px]
-          after:border-red-darker
-          after:content-[' ']
-          after:absolute
-          after:w-full
-          after:left-0
-          after:top-[542px]
-        "> 
+        class="w-full h-[450px] bg-red-lighter block absolute left-0 mb-10 line-after after:top-[542px]"> 
         <img src="@/assets/profile-image.jpeg" alt="illustration" class="object-cover w-full h-full object-top-[100px]"/>
       </div>
 
@@ -82,15 +67,7 @@
         </h1>
       </div>
 
-      <div class="
-        w-full 
-        before:border-b-[3px]
-        before:border-red-darker
-        before:content-[' ']
-        before:absolute
-        before:w-full
-        before:left-0
-      ">
+      <div class="w-full line-before">
       <div class="flex flex-col gap-[128px] my-[128px]">
         <ProjectItem :name="'The “Hora” delivery app'" :hashtags="['Web design', 'Mobile design', 'UX/UI desing']"/>
         <ProjectItem :number="'2'" :name="'The “MedTracker” app'" :hashtags="['Mobile design', 'UX/UI desing']"/>
@@ -100,6 +77,8 @@
       </div>
 
     </div>
+
+    <Footer />
   </div>
 
 </template>
@@ -109,4 +88,5 @@ import LinkedinLogo from '@/components/icons/IconLinkedIn.vue'
 import InstaIcon from '@/components/icons/IconInsta.vue'
 import ArrowRight from '@/components/icons/IconArrowRight.vue'
 import ProjectItem from '@/components/ProjectItem.vue'
+import Footer from '@/components/Footer.vue'
 </script>

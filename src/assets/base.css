@@ -3,12 +3,12 @@
   --primary-white: #f8f8f8;
   --primary-red: #d72323;
   --primary-dark: #120303;
-  --neutral-white: #ffffff;
-  --neutral-light: #f8f8f8;
-  --neutral-mid: #DED9D9;
-  --neutral-grey-light: #938989;
-  --neutral-grey: #473A3A;
-  --neutral-grey-dark: #120303;
+  --white: #ffffff;
+  --light: #f8f8f8;
+  --mid: #DED9D9;
+  --grey-light: #938989;
+  --grey: #473A3A;
+  --grey-dark: #120303;
   --red-ligher: #FCDADA;
   --red-light: #F08181;
   --red: #D72323;
@@ -44,11 +44,12 @@
   --lg-p-small-font-size: 0.805rem;
   --lg-p-small-line-height: 1rem;
 
+  /* TODO: find out the correct values for these */
   --md-h1-font-size: 3.05188rem;
   --md-h1-line-height: 3rem;
   --md-h2-font-size: 2.44125rem;
   --md-h2-line-height: 2.5rem;
-  --md-h3-font-size: 1.95313rem;
+  --md-h3-font-size: 1.5313rem;
   --md-h3-line-height: 2rem;
   --md-h4-font-size: 1.5625rem;
   --md-h4-line-height: 1.5rem;
@@ -103,7 +104,7 @@
   box-sizing: border-box;
   margin: 0;
 }
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
   color: var(--primary-dark);
   font-family: var(--font-primary) !important;
   font-style: normal;
@@ -115,7 +116,7 @@ p {
   font-family: var(--font-secondary);
   font-weight: 400;
 }
-h1 {
+h1, .h1 {
   /* Heading/1 */  
   font-size: var(--h1-font-size) !important;
   font-weight: 700 !important;
@@ -123,33 +124,41 @@ h1 {
   line-height: var(--h1-line-height) !important;
 }
 
+
 h1.light {
   font-weight: 300 !important;
   letter-spacing: -0.05963rem ;
 }
 
-h2 {
+h2, .h2 {
   font-size: var(--h2-font-size) !important;
   font-weight: 500 !important;
   letter-spacing: -0.0305rem !important;
   line-height: var(--h2-line-height) !important;
 }
 
-h3  {
+h3, .h3  {
   font-weight: 500 !important;
   font-size: var(--h3-font-size) !important;
   letter-spacing: -0.02444rem !important;
   line-height: var(--h3-line-height) !important;
 }
+.head1 {
+  /* Heading/1 */  
+  font-size: var(--h1-font-size) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.11919rem;
+  line-height: var(--h1-line-height) !important;
+}
 
-h4 {
+h4, .h4 {
   font-weight: 500 !important;
   font-size: var(--h4-font-size) !important;
   letter-spacing: -0.01953rem !important;
   line-height: var(--h4-line-height) !important;
 }
 
-h5 {
+h5, .h5 {
   font-weight: 300;
   font-size: var(--h5-font-size) !important;
   letter-spacing: -0.01563rem !important;

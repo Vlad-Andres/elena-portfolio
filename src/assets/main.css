@@ -3,6 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.tooltip {
+    @apply invisible absolute;
+}
+  
+.has-tooltip:hover .tooltip {
+    @apply visible z-50;
+}  
+
 @media screen and (max-width: 1280px) {
     :root {
         --margin-x-content: var(--small-x-margin);
@@ -36,4 +44,22 @@
     font-family: 'AR One Sans Retina';
     src: local('AROneSansRetina'), url('/fonts/AROneSansRetina/AROneSansRetina-Regular.ttf')
     format('truetype');
+}
+
+.line-before::before {
+    border-bottom: solid 3px;
+    border-color: var(--red-darker);
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.line-after::after {
+    border-bottom: solid 3px;
+    border-color: var(--red-darker);
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    left: 0;
 }
