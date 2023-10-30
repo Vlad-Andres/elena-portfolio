@@ -31,10 +31,10 @@
                 </div>
             </div>
         </div>
-        <div class='tooltip rounded shadow-lg w-4/12'
-            :style="{ 'left': (leftPos + 10) + 'px', 'top': topPos + 10 + 'px' }"
+        <div class='tooltip rounded shadow-lg'
+            :style="tooltipStyle"
         >
-            <img src="@/assets/hora-preview.png" alt="illustration" class="object-fill  object-top-[100px]"/>       
+            <img src="@/assets/hora-preview.png" alt="illustration" :class="tooltipClass"/>       
         </div>
     </div>
 </template>
@@ -42,7 +42,7 @@
 <script setup>
 import Zero from '@/components/ZeroWithColoredDot.vue'
 import { useMouse } from '@vueuse/core'
-import { defineProps, ref } from 'vue'
+import { defineProps, ref, reactive, computed } from 'vue'
 const props = defineProps({
     name: {
         type: String,
@@ -59,13 +59,73 @@ const props = defineProps({
     previewImageLinkg: {
         type: String,
         default: 'hora-preview.png'
+    },
+    imageWidth: {
+        type: Number,
+        default: 500
+    },
+    imageHeight: {
+        type: Number,
+        default: 250
+    }
+})
+const screenWidth = window.innerWidth
+
+const mouse = useMouse({touch: false})
+const mousePosition = reactive({
+    left: mouse.x,
+    top: mouse.y,
+})
+
+const tooltipPostion = reactive({
+    left: 0,
+    top: 0
+})
+
+const tooltipClass = computed(() => {
+    const widthClass = `w-[${props.imageWidth}px]`
+    const heightClass = `h-[${props.imageHeight}px]`
+    return {
+        'object-cover': true,
+        [widthClass] : true,
+        [heightClass] : true
     }
 })
 
-const mousePosition = useMouse()
-const leftPos = ref(mousePosition.x)
-const topPos = ref(mousePosition.y)
+let mouseYInViewport = ref(0)
 
+const updateTooltipPosition = (event) => {
+    mouseYInViewport = event.clientY
+    console.log("Mouse Y: ", mouseYInViewport);
+}
+
+const tooltipStyle = computed(() => {
+    const tooltip = document.querySelector('.tooltip')
+    const screenHeight = window.innerHeight
+    if (tooltip) {
+        const tooltipYOnScreen = tooltip.getBoundingClientRect().top
+        const heightDiff = screenHeight - mouseYInViewport - props.imageHeight
+        console.log("Height diff: ", heightDiff);
+        if (heightDiff != NaN && heightDiff < 0) {
+            tooltipPostion.top = mousePosition.top + heightDiff
+        } else {
+            tooltipPostion.top = mousePosition.top
+        }
+    }
+    console.log("Window height: ", screenHeight);
+    const widthDiff = screenWidth - mousePosition.left
+
+    if (widthDiff < props.imageWidth) {
+        tooltipPostion.left = mousePosition.left - (props.imageWidth - widthDiff)
+    } else {
+        tooltipPostion.left = mousePosition.left
+    }
+
+    return {
+        left: `${tooltipPostion.left}px`,
+        top: `${tooltipPostion.top}px`
+    }
+})
 
 </script>
 
