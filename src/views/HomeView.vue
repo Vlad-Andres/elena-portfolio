@@ -42,9 +42,21 @@
             <span class="text-primary-red">My goal...</span>
           </p>
         </div>
-        <div class="flex-none xl:w-[33.75rem] w-[22rem] mt-4">
+        <div class="flex-none xl:w-[33.75rem] w-[22rem] mt-4 mb-12">
          <a href="/read-more">
-            <h5 class="text-right">Read more<ArrowRight class="inline"/> </h5>
+            <h5 class="text-right">
+              <span class="group border-b border-b-4 border-b-red-300 px-2 hover:text-red-300 hover:text-3xl">
+                Read more 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" 
+                class="w-6 h-6 inline group-hover:w-8 group-hover:h-8 ">
+                  <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                </svg>
+
+
+
+<!-- <ArrowRight class="inline fill-blue-500"/>  -->
+              </span>
+            </h5>
          </a>
         </div>
       </div>
